@@ -1,11 +1,20 @@
-extends Area2D
+extends ScreenWrapper
+class_name Rock
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var speed: float = 150 #pixels per second
+var rotation_speed: float = 180 #degrees per second
+var direction: Vector2 = Vector2(0, -1)
 
+func _ready():
+	speed = randf_range(150, 300)
+	direction.x = randf_range(-1, 1)
+	direction.y = randf_range(-1, 1)
+	rotation_speed = randf_range(-180, 180)
+	animated_sprite_2d.frame = randi_range(0, 4)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _process(delta):
+	position += direction * speed * delta
+	rotation_degrees += rotation_speed * delta
+	super._process(delta)

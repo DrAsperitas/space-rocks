@@ -1,12 +1,46 @@
 [gd_scene format=3 uid="uid://duiesnqf505sd"]
 
 [ext_resource type="Script" uid="uid://dy3d42fk3pe12" path="res://Rock/Rock.gd" id="1_wuppp"]
+[ext_resource type="Texture2D" uid="uid://4yblubeg25x" path="res://Rock/assets/Rock1.png" id="2_ru0k0"]
+[ext_resource type="Texture2D" uid="uid://bevaifbr853sy" path="res://Rock/assets/Rock2.png" id="3_m1swu"]
+[ext_resource type="Texture2D" uid="uid://dwo3nu0mn13c6" path="res://Rock/assets/Rock3.png" id="4_gsyav"]
+[ext_resource type="Texture2D" uid="uid://ghfdi11dhxfk" path="res://Rock/assets/Rock4.png" id="5_yggcv"]
+[ext_resource type="Texture2D" uid="uid://dar05d75wy2xg" path="res://Rock/assets/Rock5.png" id="6_5emn0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ejki1"]
 radius = 47.07441
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ejki1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ru0k0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m1swu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gsyav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yggcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5emn0")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Rock" type="Area2D" unique_id=1182837202]
 script = ExtResource("1_wuppp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1414482850]
 shape = SubResource("CircleShape2D_ejki1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=409943033]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_ejki1")
+frame = 4
+frame_progress = 0.08982662

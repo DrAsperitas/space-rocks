@@ -1,19 +1,27 @@
 [gd_scene format=3 uid="uid://dhmmlqnos0d8n"]
 
 [ext_resource type="Script" uid="uid://dansvaa3darfj" path="res://Ship/Ship.gd" id="1_11244"]
+[ext_resource type="Texture2D" uid="uid://bs57ajjdms3s" path="res://Ship/assets/Ship.png" id="2_2s2wp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejki1"]
-size = Vector2(50, 16)
+size = Vector2(26, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqkd1"]
-size = Vector2(16, 44)
+size = Vector2(16, 18)
 
 [node name="Ship" type="Area2D" unique_id=1019558851]
+scale = Vector2(3, 3)
 script = ExtResource("1_11244")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1839185160]
+position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_ejki1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=644497432]
-position = Vector2(0, -22)
+position = Vector2(0, -9)
 shape = SubResource("RectangleShape2D_iqkd1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=355941433]
+texture_filter = 1
+position = Vector2(0, -16)
+texture = ExtResource("2_2s2wp")

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://biehskg2qpme5"]
+
+[ext_resource type="Script" uid="uid://cilukiebm07cc" path="res://UFO/UFO.gd" id="1_7cik0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ejki1"]
+radius = 12.0
+height = 70.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dw4pw"]
+radius = 8.0
+height = 44.0
+
+[node name="UFO" type="Area2D" unique_id=42084944]
+script = ExtResource("1_7cik0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1614185735]
+rotation = 4.712389
+shape = SubResource("CapsuleShape2D_ejki1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1787545347]
+position = Vector2(0, -16)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_dw4pw")

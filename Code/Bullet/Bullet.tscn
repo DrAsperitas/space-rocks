@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://db3otv5j2cbxb"]
 
 [ext_resource type="Script" uid="uid://tj5f5k3bop43" path="res://Bullet/Bullet.gd" id="1_qratc"]
+[ext_resource type="Texture2D" uid="uid://m73d11ei4uby" path="res://Bullet/assets/Bullet.png" id="2_v7qj8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ejki1"]
 radius = 6.0
@@ -10,3 +11,11 @@ script = ExtResource("1_qratc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=725883393]
 shape = SubResource("CapsuleShape2D_ejki1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=67108742]
+texture_filter = 1
+texture = ExtResource("2_v7qj8")
+
+[node name="Timer" type="Timer" parent="." unique_id=1030912667]
+wait_time = 2.5
+autostart = true

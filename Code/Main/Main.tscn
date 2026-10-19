@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://db3otv5j2cbxb" path="res://Bullet/Bullet.tscn" id="3_u2i7p"]
 [ext_resource type="PackedScene" uid="uid://duiesnqf505sd" path="res://Rock/Rock.tscn" id="4_hh5pf"]
 [ext_resource type="PackedScene" uid="uid://biehskg2qpme5" path="res://UFO/UFO.tscn" id="5_qg80j"]
+[ext_resource type="PackedScene" uid="uid://bpi51limxqldb" path="res://Player/Player.tscn" id="6_u2i7p"]
 
 [node name="Main" type="Node" unique_id=1088904992]
 script = ExtResource("1")
@@ -26,3 +27,13 @@ position = Vector2(319, 112)
 
 [node name="Rock3" parent="." unique_id=19127211 instance=ExtResource("4_hh5pf")]
 position = Vector2(121, 178)
+
+[node name="Player" parent="." unique_id=584752263 instance=ExtResource("6_u2i7p")]
+anchors_preset = -1
+anchor_left = 0.41000003
+anchor_top = 0.016
+anchor_right = 0.59400004
+anchor_bottom = 0.09
+offset_left = -1.5258789e-05
+offset_top = 0.19999981
+offset_right = -3.0517578e-05

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bhnuy8c5hwrp6"]
+
+[ext_resource type="Texture2D" uid="uid://bs57ajjdms3s" path="res://Ship/assets/Ship.png" id="1_bydpf"]
+
+[node name="Life" type="TextureRect" unique_id=1117460534]
+texture = ExtResource("1_bydpf")

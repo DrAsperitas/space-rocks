@@ -19,4 +19,13 @@ vertical_alignment = 1
 layout_mode = 2
 
 [node name="Life" parent="VBox/LivesUI" unique_id=1117460534 instance=ExtResource("1_3qydi")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Life2" parent="VBox/LivesUI" unique_id=1957126502 instance=ExtResource("1_3qydi")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Life3" parent="VBox/LivesUI" unique_id=297994096 instance=ExtResource("1_3qydi")]
+texture_filter = 1
 layout_mode = 2

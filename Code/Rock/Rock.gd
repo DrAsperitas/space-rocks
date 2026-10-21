@@ -12,6 +12,7 @@ func _ready():
 	direction.x = randf_range(-1, 1)
 	direction.y = randf_range(-1, 1)
 	rotation_speed = randf_range(-180, 180)
+	animated_sprite_2d.sprite_frames.get_frame_count("default")
 	animated_sprite_2d.frame = randi_range(0, 4)
 
 func _process(delta):

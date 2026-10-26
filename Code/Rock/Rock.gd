@@ -24,6 +24,7 @@ func _process(delta):
 
 func on_area_entered(other_area: Area2D):
 	if other_area is Bullet:
-		main.just_scored(1, other_area.player)
+		if other_area.player != null:
+			main.just_scored(1, other_area.player)
 		other_area.queue_free()
 		queue_free()

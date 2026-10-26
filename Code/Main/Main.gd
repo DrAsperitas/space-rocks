@@ -22,7 +22,6 @@ func spawn_rocks(rock_count):
 
 func spawn_player():
 	var player = PLAYER_UI.instantiate()
-	player.position.x = get_viewport().size.x / 3.5
 	add_child(player)
 	players.append(player)
 

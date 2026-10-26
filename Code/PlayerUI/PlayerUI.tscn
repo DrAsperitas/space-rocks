@@ -4,6 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://bhnuy8c5hwrp6" path="res://PlayerUI/assets/Life.tscn" id="2_4n4wi"]
 
 [node name="PlayerUI" type="PanelContainer" unique_id=584752263]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_right = 46.0
+offset_bottom = 59.0
+grow_horizontal = 2
 script = ExtResource("1_7o3gy")
 
 [node name="VBox" type="VBoxContainer" parent="." unique_id=295413390]

@@ -3,7 +3,7 @@ class_name Ship
 
 const BULLET = preload("res://Bullet/Bullet.tscn")
 
-var rotation_rate: float = 180.0 #degrees per second
+var rotation_rate: float = 360.0 #degrees per second
 var velocity: Vector2 = Vector2.ZERO
 var thrust_power: float = 10.0
 

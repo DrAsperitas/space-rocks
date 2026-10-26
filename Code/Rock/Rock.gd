@@ -3,6 +3,8 @@ class_name Rock
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+var main: Main
+
 var speed: float = 150 #pixels per second
 var rotation_speed: float = 180 #degrees per second
 var direction: Vector2 = Vector2(0, -1)
@@ -19,3 +21,9 @@ func _process(delta):
 	position += direction * speed * delta
 	rotation_degrees += rotation_speed * delta
 	super._process(delta)
+
+func on_area_entered(other_area: Area2D):
+	if other_area is Bullet:
+		main.just_scored(1, other_area.player)
+		other_area.queue_free()
+		queue_free()

@@ -2,33 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cgke8bpq05cbs" path="res://Main/Main.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dhmmlqnos0d8n" path="res://Ship/Ship.tscn" id="2_6aewd"]
-[ext_resource type="PackedScene" uid="uid://duiesnqf505sd" path="res://Rock/Rock.tscn" id="4_hh5pf"]
-[ext_resource type="PackedScene" uid="uid://bpi51limxqldb" path="res://Player/Player.tscn" id="6_u2i7p"]
 
 [node name="Main" type="Node" unique_id=1088904992]
 script = ExtResource("1")
 
 [node name="Ship" parent="." unique_id=1019558851 instance=ExtResource("2_6aewd")]
 position = Vector2(252, 473)
-
-[node name="Rock" parent="." unique_id=1182837202 instance=ExtResource("4_hh5pf")]
-position = Vector2(359, 255)
-
-[node name="Rock2" parent="." unique_id=139964879 instance=ExtResource("4_hh5pf")]
-position = Vector2(319, 112)
-
-[node name="Rock3" parent="." unique_id=19127211 instance=ExtResource("4_hh5pf")]
-position = Vector2(121, 178)
-
-[node name="Player" parent="." unique_id=584752263 instance=ExtResource("6_u2i7p")]
-anchors_preset = -1
-anchor_left = 0.41000003
-anchor_top = 0.016
-anchor_right = 0.59400004
-anchor_bottom = 0.09
-offset_left = -1.5258789e-05
-offset_top = 0.19999981
-offset_right = -3.0517578e-05
 
 [node name="UFOTimer" type="Timer" parent="." unique_id=1985757177]
 wait_time = 5.0

@@ -3,6 +3,7 @@ class_name Bullet
 
 @onready var timer: Timer = $Timer
 
+var player: PlayerUI
 var ship: Ship
 var speed: float = 300 #pixels per second
 

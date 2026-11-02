@@ -34,9 +34,7 @@ func on_ufo_spawn():
 	ufo.position.y  = randf_range(0.0, get_viewport().size.y )
 	add_child(ufo)
 
-func _process(delta: float) -> void:
-	if Input.is_action_pressed("quit"):
-		get_tree().quit()
+
 
 func just_scored(delta_score, player):
 	players[0].update_score(delta_score)

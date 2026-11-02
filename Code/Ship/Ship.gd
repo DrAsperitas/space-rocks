@@ -19,8 +19,10 @@ func _process(delta):
 		var direction = Vector2(sin(rotation), -cos(rotation))
 		velocity += direction * thrust_power
 	position += velocity * delta
-	
+	fire()
 
+#FIX fire function doesnt work,
+#gives error (Invalid assignment of property or key 'player' with value of type 'Area2D (Ship)' on a base object of type 'null instance'.)
 func fire():
 	if Input.is_action_just_pressed("fire"):
 		var new_bullet = BULLET.instantiate()

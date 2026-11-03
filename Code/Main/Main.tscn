@@ -8,6 +8,5 @@ script = ExtResource("1")
 
 [node name="UFOTimer" type="Timer" parent="." unique_id=1985757177]
 wait_time = 5.0
-autostart = true
 
 [node name="PauseMenu" parent="." unique_id=1884771304 instance=ExtResource("2_83ytx")]

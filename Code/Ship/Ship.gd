@@ -1,7 +1,7 @@
 extends ScreenWrapper
 class_name Ship
 
-const BULLET = preload("res://Bullet/Bullet.tscn")
+const BULLET = preload("uid://db3otv5j2cbxb")
 
 
 var player: PlayerUI
@@ -18,15 +18,15 @@ func _process(delta):
 	if Input.is_action_pressed("thrust"):
 		var direction = Vector2(sin(rotation), -cos(rotation))
 		velocity += direction * thrust_power
-	position += velocity * delta
-	fire()
-
-#FIX fire function doesnt work,
-#gives error (Invalid assignment of property or key 'player' with value of type 'Area2D (Ship)' on a base object of type 'null instance'.)
-func fire():
 	if Input.is_action_just_pressed("fire"):
-		var new_bullet = BULLET.instantiate()
-		new_bullet.player = self
-		new_bullet.position = position
-		new_bullet.rotation = rotation
-		get_parent().add_child(new_bullet)
+		fire()
+		
+	position += velocity * delta
+
+#FIX fire function doesnt work, gives an error
+func fire():
+	var new_bullet = BULLET.instantiate()
+	new_bullet.player = self
+	new_bullet.position = position
+	new_bullet.rotation = rotation
+	get_parent().add_child(new_bullet)

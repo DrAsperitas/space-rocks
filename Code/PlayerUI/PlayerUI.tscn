@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bhnuy8c5hwrp6" path="res://PlayerUI/assets/Life.tscn" id="2_4n4wi"]
 
 [node name="PlayerUI" type="PanelContainer" unique_id=584752263]
+z_index = 50
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

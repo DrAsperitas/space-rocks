@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dhgysl2eds6sy"]
 
 [ext_resource type="Script" uid="uid://dd0cix7datup6" path="res://Main/PauseMenu/PauseMenu.gd" id="1_86arr"]
+[ext_resource type="FontFile" uid="uid://cuxflqo0cfo47" path="res://Fonts/Redaction_50/Redaction50-Bold.ttf" id="2_mhmsu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejki1"]
 bg_color = Color(0.0448631, 0, 0.104890905, 1)
@@ -10,16 +11,18 @@ expand_margin_right = 12.0
 expand_margin_bottom = 12.0
 
 [node name="PauseMenu" type="PanelContainer" unique_id=1884771304]
+process_mode = 3
+z_index = 50
 texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.45800003
 anchor_top = 0.45900002
 anchor_right = 0.62600005
 anchor_bottom = 0.624
-offset_left = -1.5258789e-05
-offset_top = -0.2000122
-offset_right = -42.00003
-offset_bottom = -66.20001
+offset_left = -21.000015
+offset_top = -32.200012
+offset_right = -63.00003
+offset_bottom = -98.20001
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
@@ -30,9 +33,18 @@ script = ExtResource("1_86arr")
 layout_mode = 2
 
 [node name="PlayButton" type="Button" parent="VBox" unique_id=578458326]
+texture_filter = 1
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mhmsu")
 text = "Play"
+
+[node name="ContinueButton" type="Button" parent="VBox" unique_id=1476927192]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mhmsu")
+text = "Continue"
 
 [node name="QuitButton" type="Button" parent="VBox" unique_id=1949406619]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mhmsu")
 text = "Quit"

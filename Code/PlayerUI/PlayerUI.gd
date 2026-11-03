@@ -14,7 +14,7 @@ func _ready() -> void:
 	UpdateScore(1)
 	UpdateLives(3)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("launch_ship"):
 		spawn_ship()
 

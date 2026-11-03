@@ -1,7 +1,7 @@
 extends Area2D
 class_name ScreenWrapper
 
-func _process(delta):
+func _process(_delta):
 	if position.x < 0:
 		position.x = get_viewport().size.x
 	if position.x > get_viewport().size.x:

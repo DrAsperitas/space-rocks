@@ -28,3 +28,6 @@ func on_area_entered(other_area: Area2D):
 			main.just_scored(1, other_area.player)
 		other_area.queue_free()
 		queue_free()
+	if other_area is Ship:
+		other_area.destroy_ship()
+		queue_free()

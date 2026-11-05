@@ -24,6 +24,7 @@ func _process(delta):
 
 func destroy_ship():
 	player.current_ship = null
+	player.check_game_over()
 	queue_free()
 
 

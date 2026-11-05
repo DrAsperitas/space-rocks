@@ -5,6 +5,7 @@ const Ufo = preload("res://UFO/UFO.tscn")
 const ROCK = preload("res://Rock/Rock.tscn")
 const PLAYER_UI = preload("res://PlayerUI/PlayerUI.tscn")
 
+@onready var pause_menu: PauseMenu = $PauseMenu
 @onready var ufo_timer: Timer = $UFOTimer
 
 var players: Array[PlayerUI]
@@ -23,6 +24,7 @@ func spawn_rocks():
 
 func spawn_player():
 	var player = PLAYER_UI.instantiate()
+	player.main = self
 	add_child(player)
 	players.append(player)
 
@@ -42,4 +44,7 @@ func just_scored(delta_score, _player):
 	
 
 func start_new_round():
+	pass
+
+func game_over():
 	pass

@@ -43,6 +43,6 @@ shape = SubResource("CircleShape2D_ejki1")
 texture_filter = 1
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_ejki1")
-frame_progress = 0.7166061
+frame_progress = 0.35508692
 
 [connection signal="area_entered" from="." to="." method="on_area_entered"]

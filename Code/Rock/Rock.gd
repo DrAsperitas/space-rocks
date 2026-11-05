@@ -1,6 +1,8 @@
 extends ScreenWrapper
 class_name Rock
 
+const ROCK = preload("uid://duiesnqf505sd")
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var main: Main
@@ -22,6 +24,17 @@ func _process(delta):
 	rotation_degrees += rotation_speed * delta
 	super._process(delta)
 
+func split():
+	if scale.x > 0.25:
+		for i in 2:
+			var rock: Rock = ROCK.instantiate()
+			rock.position = position
+			rock.scale = scale * 0.5
+			get_parent().add_child.call_deferred(rock)
+	
+	queue_free()
+
+
 func on_area_entered(other_area: Area2D):
 	if other_area is Bullet:
 		if other_area.player != null:
@@ -30,4 +43,4 @@ func on_area_entered(other_area: Area2D):
 		queue_free()
 	if other_area is Ship:
 		other_area.destroy_ship()
-		queue_free()
+		split()
